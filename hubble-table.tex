@@ -1,16 +1,26 @@
-\documentclass{article}
+\documentclass[a4paper,9pt]{article}
 \usepackage{conference}
+\usepackage{latexsym}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{amssymb,amsfonts,amsmath}
+\usepackage{graphicx}
+\usepackage{pstricks}
+\usepackage{cite}
+\usepackage{hyperref}
+\usepackage[varg]{txfonts}
 
-\usepackage[utf8]{inputenc} % allow utf-8 input
-\usepackage[T1]{fontenc}    % use 8-bit T1 fonts
-\usepackage{hyperref}       % hyperlinks
-\usepackage{url}            % simple URL typesetting
 \usepackage{booktabs}       % professional-quality tables
-\usepackage{amsfonts}       % blackboard math symbols
-\usepackage{nicefrac}       % compact symbols for 1/2, etc.
-\usepackage{microtype}      % microtypography
-\usepackage[final]{graphicx}% graphics
-\usepackage{lipsum}
+
+%\usepackage[letterpaper, landscape, lmargin=0.25in, rmargin=1.25in]{geometry}
+\usepackage{tabularx}
+\usepackage{enumerate}
+%\usepackage{enumitem}
+\usepackage{multicol}
+\pagenumbering{gobble}
+\title{Hubble Table}
+%\author{author}
+\date{01/20/2020}
 
 \title{Hubble Table \emph{conference} preprint}
 %{F.M. Sanchez,\ M. Grosmann,\ B. Kress,\ N. Flawisky,\ L. Gueroult, \textit{Cosmic Holography}}
@@ -101,31 +111,40 @@ On y voit la représentation (étonnement sous forme d'une droite!) de divers pa
 Voir Figure \ref{fig:figure_label}. Pour plus d'explications. \footnote{http://vixra.org/abs/1904.0218}
  
 
-\begin{table}[]
-\begin{tabular}{|l|l|l|l|}
-\hline
-\multicolumn{2}{|c|}{Hubble Table}          & \multicolumn{1}{r|}{}                                                                     &                                                                                         \\ \hline
-Description & \multicolumn{1}{c|}{Equation} & \multicolumn{1}{c|}{\begin{tabular}[c]{@{}c@{}}Value in Gly\\ approximation\end{tabular}} & \multicolumn{1}{c|}{\begin{tabular}[c]{@{}c@{}}Value of G\\ approximation\end{tabular}} \\ \hline
-Example 1   & Equation 1                    & \multicolumn{1}{r|}{13.65}                                                                & 6.67.10\textasciicircum{}-11                                                            \\ \hline
-Example 2   & Equation 2                    & \multicolumn{1}{r|}{13.7}                                                                 & 6.67.10\textasciicircum{}-11                                                            \\ \hline
-Example 3   & Equation 3                    & \multicolumn{1}{r|}{18}                                                                   & 6.67.10\textasciicircum{}-11                                                            \\ \hline
-Example 4   & Equation 4                    & \multicolumn{1}{r|}{13.81}                                                                & 6.67.10\textasciicircum{}-11                                                            \\ \hline
-Example 5   & Equation 5                    & \multicolumn{1}{r|}{13.82}                                                                & 6.67.10\textasciicircum{}-11                                                            \\ \hline
-Example 6   & Equation 6                    & 13.1                                                                                      & 6.67.10\textasciicircum{}-11                                                            \\ \hline
-Example 7   & Equation                      & 13.2                                                                                      & 6.67.10\textasciicircum{}-11                                                            \\ \hline
-Example 8   & Equation                      & 13.3                                                                                      & 6.67.10\textasciicircum{}-11                                                            \\ \hline
-Example 9   & Equation                      & 13.4                                                                                      & 6.67.10\textasciicircum{}-11                                                            \\ \hline
-Example 10  & Equation                      & 13.41                                                                                     & 6.67.10\textasciicircum{}-11                                                            \\ \hline
-Example 11  & Equation                      & 13.81                                                                                     & 6.67.10\textasciicircum{}-11                                                            \\ \hline
-Example 12  & Equation 12                   & 13.8001                                                                                   & 6.67.10\textasciicircum{}-11                                                            \\ \hline
-\end{tabular}
-\end{table}
+\begin{table*}
+ %\caption{Topological Axis $f(d)~=~exp(2^{d/4})$. Data with $R = 2a_G\lambdabar_e=2\hbar^2/Gm_em_pm_H~ \approx 13.812~ Glyr,R_{GC}=2r_e^6/l_P^5\approx 9.0758\cdot 10^{86}~m $}  
+%  \begin{adjustwidth}{-2cm}{}
+
+  % \end{adjustwidth}
+  \hskip-2.0cm\begin{tabular}{llll}
+  %\begin{tabular}{llll}
+    \toprule
+    \multicolumn{4}{c}{15 formules pour le rayon de Hubble: pulsation rapide Bang-Crunch}                   \\
+    \cmidrule(r){1-4}
+   Item     & Formule     & Valeur(Gal) & Remarques \\
+    \midrule
+    1 & $\lambdabar_e g(6)$ & 13.82  & Fonction topologique $g(k)=exp(2^{k+1/2})/k$ pour k=6 (d=26 valeur critique)\\
+    2 & $\lambdabar_e S_4^5$ & 13.80 & $S_4=2\pi^2a^3$ aire de la sphere 4D de rayon $a \approx 137.036$ \\  
+    3 & $\lambdabar_e 2^{128}$ & 13.90  & $R/2 \approx 2^{127}$ Nombre de Lucas dernier terme de la hierarchie combinatoire \\ 
+    4 & $\lambdabar_e \pi^{155/2}$ & 13.80  & $\pi$ base de calcul comme dans les series de Riemann: $2^{1/155} \approx \pi^{1/256} \approx (2\pi)^{1/(3\times 137)}$ \\
+    5 & $\lambdabar_p WZ^{4}$ & 13.80  & relation $a_G \approx W^8$ [3] \\
+    6 & $(\lambdabar_{Ryd} n^{4})^2/\lambdabar_p$ & 13.81 & vient de $ct_K/\lambdabar_e \approx aFWZn$ \\ 
+    7 & $(2\lambdabar_{e}/3)(\lambdabar_{CMB}/\lambdabar_{H2})^3$ & 13.90  & Conservation holographique \\
+    8 & $(\lambda_{CMB}/(j+1))^2/l_P$ & 13.80  & vient de la relation centrale cosmo-biologique [3]: $\sqrt(Rl_P) \approx \lambda_{mam}$ \\
+    9 & $(20/3)N_{Edd}Gm_H/c^2$ & 13.79  & Confirme Eddington et l'existence de la masse noire [3] \\
+    10 & $(\lambdabar_{e} (2R/R_N)^{210})$ & 13.85  & Confirme le principe holique et l'hologramme du Grandcosmos de rayon $R_N$  \\
+    11 & $2(ct_K/F)^2/\lambdabar_{e}$ & 13.81198  & Elimination de c entre les couplages gravitationel et intermediaire [4] \\
+    12 & $(\lambdabar_{e} 2^{128})(1-(137^2+\pi^2+e^2)/pH)$ & 13.8119768  & Montre la symetrie de $\pi$, e and 137 \\
+    13 & $(\lambdabar_{e} 2^{128}/d_e^2(m_H/m_p)^6$ & 13.8119768  & Raccorde la constante d'Atiyah \\
+    14 & $\lambdabar_e g(6)/(1+\sqrt(137^2+\sqrt(136))/jn)$ & 13.8119768 & Confirmation de 137=136+1 \\
+    15 & $2\lambdabar_{e} (pn/H^{2})(g(5)/\ln(2-1/ja^2))^2$ & 13.8119767  & Implique la pertinence de $\ln(2) \approx 2\sqrt(3/5)$  \\
+    \bottomrule
+  \end{tabular}
+  \label{tab:table}
+\end{table*}
 
 \subsection{Lists}
 
-\begin{itemize}
-\item Axe Topologique
-\end{itemize}
 
 
 \bibliographystyle{unsrt}  
